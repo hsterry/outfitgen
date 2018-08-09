@@ -1,33 +1,38 @@
+/*notes:
+  padding: top right bottom left;
+  padding: top/bottom right/left;
+*/
+
 nav {
-  left: 0;
+  /*position: fixed;*/
   width: 100%
-  height: 80px;
+  height: 50px;
   padding: 10px 20px;
   box-sizing: border-box;
   transition: .3s;
-  overflow: hidden;
+  white-space: nowrap;
+  overflow:hidden;
   text-align: center;
   text-decoration:none;
-  font-family: 'Kanit', sans-serif;
+  font-family: 'Montserrat', sans-serif;
   font-size: 17px;
-  z-index: 500;
   background-color: white;
+  opacity: .8;
 }
 
-nav.black {
-  background: black;
-  height: 80px;
-  padding: 10px 20px;
-}
 .nav-placeholder {
-  margin: 0 0 20px 0px;
+  margin: 0px 0 -84px 0px; /*originally 0 0 10px 0*/
 }
 
 .fixed {
+  overflow: visible;
   position: fixed;
   top: 0;
   left: 0;
   width: 100%;
+  background-color: #FFF69E;
+  box-shadow:0 4px 10px 0 rgba(0,0,0,0.2),0 4px 20px 0 rgba(0,0,0,0.19);
+  opacity: .95;
 }
 
 nav .logo {
@@ -37,7 +42,6 @@ nav .logo {
 }
 
 nav ul {
-  list-style: none;
   float: right;
   margin: 0;
   padding: 0;
@@ -49,7 +53,8 @@ nav ul li {
 }
 
 nav ul li a {
-  line-height: 80px;
+  display: block;
+  line-height: 40px;
   color: #1E1E1E;
   padding: 12px 30px;
   text-decoration: none;
@@ -57,26 +62,49 @@ nav ul li a {
   transition: .3s;
 }
 
-nav.black ul li a {
-  color: #fff;
+nav ul li ul {
+  display: block;
+  min-width:200px;
+  position: absolute;
+  /*margin-top: 1px;*/
+  /*box-shadow: 0 2px 5px rgba(0,0,0,.5);*/
+  transition: .5s;
+  background-color: white;
+  opacity: .9;
+  /*margin-top: 10.3px;*/
 }
 
-nav ul li a:focus {
-  outline: none;
-}
-
-nav ul li a.active {
-  background: #FFF69E
-  color: #fff;
+nav ul li a:hover {
+  background-color: #9DE8D2;
   border-radius: 6px;
+  opacity: inherit;
+}
+
+nav ul li ul li {
+  display: none;
+}
+
+nav ul li ul li a {
+  padding: 5px;
+  line-height: 30px;
+}
+
+nav ul li:hover ul li {
+  display: block;
+  opacity: inherit;
+}
+
+nav ul li ul li a:hover {
+    background-color: #f3f3f3;
+    opacity: inherit;
 }
 
 section.sec1 {
   width: 100%;
   height: 100vh;
-  background: url("outfitgen/minimalist-closet.jpg")
-  background-size: cover;
-  background-position: center;
+  background-image: url('minimalist-closet.jpg');
+  background-size:cover;
+  background-position:center;
 }
 
 .content {
@@ -95,9 +123,4 @@ body {
   margin: 0;
   padding:0;
   font-family: Kanit;
-}
-
-
-.shadow{
-  box-shadow:0 4px 10px 0 rgba(0,0,0,0.2),0 4px 20px 0 rgba(0,0,0,0.19)
 }
