@@ -26,10 +26,12 @@
 .sidebar {
   grid-area: sidebar;
   background-color: red;
+  display: grid;
 }
 
 .content {
   grid-area: content;
+  display: grid; /* for nested elements */
 }
 
 .footer {
