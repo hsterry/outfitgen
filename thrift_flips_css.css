@@ -9,10 +9,12 @@
   grid-template-areas:
   "toplogo toplogo"
   "navbar navbar"
+  "sidebar sidebar"
   "content content"
   "footer footer";
   grid-gap: 10px;
 }
+
 .toplogo {
   grid-area: toplogo;
 }
@@ -21,9 +23,15 @@
   grid-area: navbar;
 }
 
+.sidebar {
+  grid-area: sidebar;
+  background-color: red;
+}
+
 .content {
   grid-area: content;
 }
+
 .footer {
   grid-area: footer;
 }
@@ -34,7 +42,7 @@
 
 nav {
   /*position: fixed;*/
-  width: 100%
+  width: 100%;
   height: auto;
   padding: 10px 20px;
   box-sizing: border-box;
@@ -45,11 +53,11 @@ nav {
   text-decoration:none;
   font-family: 'Montserrat', sans-serif;
   font-size: 17px;
-  background-color: white;
+  background-color: #FFF69E;
 }
 
 .nav-placeholder {
-  margin: 0px 0 -83px 0px; /*originally 0 0 10px 0*/
+  margin: 0px 0 10px 0px; /*originally 0 0 10px 0*/
 }
 
 .fixed {
@@ -139,7 +147,7 @@ section.sec1 {
 }
 
 .actualContent p {
-  width: 900px;
+  width: 800px;
   margin: 30px auto;
   text-align: justify;
   font-size: 20px;
@@ -189,7 +197,7 @@ section.blueColor {
     grid-template-areas:
     ". toplogo toplogo toplogo toplogo ."
     "navbar navbar navbar navbar navbar navbar"
-    ". content content content content ."
+    ". sidebar content content content ."
     ". footer footer footer footer .";
       grid-gap: 10px;
   }
