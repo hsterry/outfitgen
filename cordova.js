@@ -1,3 +1,5 @@
+var list = [];
+
 var ls = window.localStorage,
     photo = document.getElementById('uploadImage'),
     canvas = document.getElementById('canvas'),
@@ -9,6 +11,12 @@ var ls = window.localStorage,
 
 if (lastImgData) {
     img.src = lastImgData;
+    //right here convert back to images
+    //call the image
+    //loop through the list
+    var array = JSON.parse(ls.getitem(list));
+    //add a loop (for loop)
+    for(i = /*check*/, i++)
 }
 
 fileReader.onload = function (e) {
@@ -55,13 +63,9 @@ function drawImage() {
    document.getElementById('imageData').href = dataUrl;
    document.getElementById('preview').src = dataUrl;
 
-   ls.setItem('image', img.src);
+   list.push( img.src);
+
+   ls.setitem('image',JSON.stringify(list));
 }
 
 drawImage();
-
-var list = []
-
-list.push("image", img.src)
-for(item in list){
-}
