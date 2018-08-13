@@ -6,7 +6,6 @@
 body {
   margin: 0;
   padding:0;
-  font-family: Kanit;
 }
 
 .grid { /*mobile version*/
@@ -38,9 +37,6 @@ body {
   grid-area: footer;
 }
 
-.navOpacity {
-    opacity: .6;
-}
 
 .sidebarProperties {
   width: 200px;
@@ -58,12 +54,13 @@ body {
 }
 
 .sidebarProperties ul li {
+    align-items: flex-start;
     list-style: none;
 }
 
 .sidebarProperties a {
   line-height: 60px;
-  padding: 12px 12px;
+  padding: 12px 60px 12px 12px;
   color: #1E1E1E;
   text-decoration: none;
   text-transform: uppercase;
@@ -74,11 +71,26 @@ body {
   border-radius: 1px; /*making larger will round edges*/
 }
 
+.sidebarProperties-placeholder {
+  margin: 0px 0px 0px 0px; /*originally 0 0 10px 0*/
+}
+
+.fixedSidebar {
+  /*overflow: visible;*/
+  position: fixed;
+  top: 100px; /*distance between stickynav and stickyside*/
+  left: 10px;
+  width: 200px;;
+  background-color: #C8E897;
+  /*box-shadow:0 2px 5px 0 rgba(0,0,0,0.2),0 4px 10px 0 rgba(0,0,0,0.19);*/
+  /*opacity: .95;*/
+}
+
 nav {
   /*position: fixed;*/
   width: 100%;
-  height: auto;
-  padding: 5px 20px;
+  height: 64px;
+  padding: 0px 20px;
   box-sizing: border-box;
   transition: .3s;
   white-space: nowrap;
@@ -94,10 +106,6 @@ nav {
   margin: 0px 0px 10px 0px; /*originally 0 0 10px 0*/
 }
 
-.sidebarProperties-placeholder {
-  margin: 0px 0px 0px 0px; /*originally 0 0 10px 0*/
-}
-
 .fixed {
   overflow: visible;
   position: fixed;
@@ -106,17 +114,6 @@ nav {
   width: 100%;
   background-color: #FFF69E;
   box-shadow:0 4px 5px 0 rgba(0,0,0,0.2),0 4px 10px 0 rgba(0,0,0,0.19);
-  /*opacity: .95;*/
-}
-
-.fixedSidebar {
-  /*overflow: visible;*/
-  position: fixed;
-  top: 100px; /*distance between stickynav and stickyside*/
-  left: 10px;
-  width: 200px;;
-  background-color: #C8E897;
-  /*box-shadow:0 2px 5px 0 rgba(0,0,0,0.2),0 4px 10px 0 rgba(0,0,0,0.19);*/
   /*opacity: .95;*/
 }
 
@@ -183,37 +180,64 @@ nav ul li ul li a:hover {
     /*opacity: inherit;*/
 }
 
-section.sec1 {
-  width: 100%;
-  height: 75vh;
-  background-image: url('images/minimalist-closet2.jpg');
-  background-size:cover;
-  background-position:center;
-}
-
 .actualContent {
-  margin-top: 80px;
-}
-.actualContent-placeholder {
-  margin: 100px 0 10px 0px;
+  /*margin-top: 80px;*/
 }
 
 .actualContent p {
   width: 800px;
   margin: 30px auto;
   text-align: justify;
-  font-size: 20px;
+  font-size: 15px;
   line-height: 30px;
+}
 
+h1 {
+  font-family: 'Amatic SC', cursive;
+  text-transform: uppercase;
+  font-size: 100px;
+}
+
+h2 {
+  font-family: 'Montserrat', sans-serif;
+}
+
+h3 {
+  font-family: 'Montserrat', sans-serif;
+}
+
+
+.sec2 h1 {
+  color: white;
+  background-color: #9DE8D2;
+  padding: 10px 10px;
+  border-radius: 20px;
+  width: 300px;
+  text-align: center;
+  width: 700px;
+  margin: 0px 100px 100px 100px
+}
+
+.footerProperties {
+  background-color: #ADFFB6;
+  text-align: center;
+  padding: 10px 0px;
+  margin-bottom: 20px;
 }
 
 .shadow{
   box-shadow:0 4px 10px 0 rgba(0,0,0,0.2),0 4px 20px 0 rgba(0,0,0,0.19)
 }
 
-h1{
-font-family: 'Lekton', sans-serif;
+section.sec2 {
+  width: 900px;
+  height: 50vh;
+  background-image: url('images/thrift-flips-101.jpg');
+  background-size:cover;
+  background-position:center;
+  border-radius: 0px;
 }
+
 
 #border {
     border: 2px solid black;
