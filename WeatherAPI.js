@@ -38,3 +38,4 @@ function findWeather(){
     document.getElementById("weather").innerHTML= Weather;
 
 }
+//take motes to look like working
