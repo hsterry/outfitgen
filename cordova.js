@@ -1,7 +1,67 @@
-function aFunction() {
-  var photo = document.getElementById('pic').value;
-  var newPhoto = document.getElementById("holder");
-  newPhoto.src=photo;
-  localStorage.setItem('key', photo);
-  newPhoto.src=localStorage.getItem('key');
+var ls = window.localStorage,
+    photo = document.getElementById('uploadImage'),
+    canvas = document.getElementById('canvas'),
+    context = canvas.getContext('2d'),
+    fileReader = new FileReader(),
+    img = new Image(), lastImgData = ls.getItem('image'),
+    x, y,
+    neww = 0, newh = 0;
+
+if (lastImgData) {
+    img.src = lastImgData;
+}
+
+fileReader.onload = function (e) {
+    console.log(typeof e.target.result, e.target.result instanceof Blob);
+    img.src = e.target.result;
+};
+
+img.onload = function() {
+    var rw = img.width / canvas.width; // width and height are maximum thumbnail's bounds
+    var rh = img.height / canvas.height;
+
+    if (rw > rh)
+    {
+        newh = Math.round(img.height / rw);
+        neww = canvas.width;
+    }
+    else
+    {
+        neww = Math.round(img.width / rh);
+        newh = canvas.height;
+    }
+
+    x = (canvas.width - neww) / 2,
+        y = (canvas.height - newh) / 2;
+
+    drawImage();
+};
+
+photo.addEventListener('change', function() {
+    var file = this.files[0];
+    return file && fileReader.readAsDataURL(file);
+});
+
+
+function drawImage() {
+   var dataUrl;
+
+    canvas.width = canvas.width;
+
+   if (img.width) context.drawImage(img, x, y, neww, newh);
+
+   dataUrl = canvas.toDataURL();
+
+   document.getElementById('imageData').href = dataUrl;
+   document.getElementById('preview').src = dataUrl;
+
+   ls.setItem('image', img.src);
+}
+
+drawImage();
+
+var list = []
+
+list.push("image", img.src)
+for(item in list){
 }
