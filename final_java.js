@@ -16,3 +16,25 @@ jQuery(document).ready(function() {
 
   });
 });
+
+
+
+
+jQuery(document).ready(function() {
+
+  /*var sideOffset = jQuery(".sidebarProperties").offset().top;*/
+
+  jQuery(".sidebarProperties").wrap('<div class="sidebar-placeholder"></div>');
+  jQuery(".sidebar-placeholder").height(jQuery(".sidebarProperties").outerHeight());
+
+  jQuery(window).scroll(function() {
+  var scrollPosition = jQuery(window).scrollTop();
+
+  if (scrollPosition >= 267.8) {
+    jQuery(".sidebarProperties").addClass("fixedSidebar");
+  } else {
+    jQuery(".sidebarProperties").removeClass("fixedSidebar");
+  }
+
+  });
+});
