@@ -1,15 +1,20 @@
 <!DOCTYPE html>
 <html>
+<link href="https://fonts.googleapis.com/css?family=Lekton" rel="stylesheet">
   <link rel ="stylesheet"; href = "final_format.css">
-    <script src="cordova.js"></script>
+  <script src="cordova.js"></script>
 <!--navigation bar-->
-<div class="topnav">
-  <a href=""> Generator </a>
-  <a href="input_outfit.html"> My Closet</a>
-  <a href=""> Inspiration</a>
-    <a href="">Home</a>
-      <a href ="log_in.html"> Log In </a>
-</div>
+<nav class="shadow">
+  <div class="logo"><img src="Style Up Cropped.jpg" width="100"></div>
+  <ul>
+    <li><a href="final.html">Home</a></li>
+    <li><a href="#">Generator</a></li>
+    <li><a href="input_outfit.html">My Closet</a></li>
+    <li><a href="#">Inspiration</a></li>
+    <li><a href="log_in.html">Log In</a><li>
+  </ul>
+
+</nav>
 
 <head>
 
@@ -18,7 +23,11 @@
 <body>
 <h1> My Closet </h1>
 <!--uploadimage-->
-<input type='file' />
-<br><img id="myImg" src="#" alt="your image">
-
+<input  id="pic" type="file">
+<img  id="holder">
+<br>
+<button type="button" onclick="aFunction()">button </button>
+<div id='border'>
+<p> words</p>
+ </div>
 </body>
