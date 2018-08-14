@@ -1,3 +1,5 @@
+var list = [];
+
 var ls = window.localStorage,
     photo = document.getElementById('uploadImage'),
     canvas = document.getElementById('canvas'),
@@ -8,7 +10,21 @@ var ls = window.localStorage,
     neww = 0, newh = 0;
 
 if (lastImgData) {
-    img.src = lastImgData;
+  //loop through the list
+  lastImgData=lastImgData.replace(/\\n/g, "\\n")
+               .replace(/\\'/g, "\\'")
+               .replace(/\\"/g, '\\"')
+               .replace(/\\&/g, "\\&")
+               .replace(/\\r/g, "\\r")
+               .replace(/\\t/g, "\\t")
+               .replace(/\\b/g, "\\b")
+               .replace(/\\f/g, "\\f");
+ lastImgData=lastImgData.replace(/[\u0000-\u0019]+/g,"");
+  var array = JSON.parse(lastImgData);
+  //add a loop (for loop)
+for(i=0; i < array.length; i++){
+    img.src = array[i];
+  }
 }
 
 fileReader.onload = function (e) {
@@ -55,13 +71,9 @@ function drawImage() {
    document.getElementById('imageData').href = dataUrl;
    document.getElementById('preview').src = dataUrl;
 
-   ls.setItem('image', img.src);
+   list.push( img.src);
+
+   ls.setitem('image',JSON.stringify(list));
 }
 
 drawImage();
-
-var list = []
-
-list.push("image", img.src)
-for(item in list){
-}

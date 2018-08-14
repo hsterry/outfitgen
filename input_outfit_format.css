@@ -3,48 +3,25 @@
   padding: top/bottom right/left;
 */
 
-body {
-  margin: 0;
-  padding:0;
-}
-
-
-
 .grid { /*mobile version*/
   display: grid;
   grid-template-columns: 1fr 1fr;
   grid-template-areas:
   "toplogo toplogo"
   "navbar navbar"
-  "content content"
+  "myCloset myCloset"
   "footer footer";
   grid-gap: 10px;
 }
-
-.grid_thriftflips { /*mobile version*/
-  display: grid;
-  grid-template-columns: 1fr 1fr;
-  grid-template-areas:
-  "toplogo toplogo"
-  "navbar navbar"
-  "sidebar sidebar"
-  "content content"
-  "footer footer";
-  grid-gap: 10px;
-}
-
 .toplogo {
   grid-area: toplogo;
 }
 .navbar {
   grid-area: navbar;
 }
-.sidebar {
-  grid-area: sidebar;
+.myCloset {
+  grid-area: myCloset;
   display: grid;
-}
-.content {
-  grid-area: content;
 }
 .footer {
   grid-area: footer;
@@ -71,7 +48,7 @@ nav {
 }
 
 .nav-placeholder {
-  margin: 0px 0 -64px 0px; /*originally 0 0 10px 0*/
+  margin: 0px 0 0px 0px; /*originally 0 0 10px 0*/
 }
 
 .fixed {
@@ -148,56 +125,8 @@ nav ul li ul li a:hover {
     /*opacity: inherit;*/
 }
 
-.sidebarProperties {
-  width: 200px;
-  height: 300px;
-  left: 10px;
-  padding: 10px 10px;
-  box-sizing: border-box;
-  transition: .3s;
-  white-space: nowrap;
-  /*overflow:hidden;*/
-  text-align: left;
-  font-family: 'Montserrat', sans-serif;
-  font-size: 15px;
-  background-color: #C8E897;
-}
-
-.sidebarProperties ul li {
-    align-items: flex-start;
-    list-style: none;
-}
-
-.sidebarProperties a {
-  line-height: 60px;
-  padding: 12px 60px 12px 12px;
-  color: #1E1E1E;
-  text-decoration: none;
-  text-transform: uppercase;
-}
-
-.sidebarProperties a:hover {
-  background-color: #9DE8D2;
-  border-radius: 1px; /*making larger will round edges*/
-}
-
-.sidebarProperties-placeholder {
-  margin: 0px 0px 0px 0px; /*originally 0 0 10px 0*/
-}
-
-.fixedSidebar {
-  /*overflow: visible;*/
-  position: fixed;
-  top: 100px; /*distance between stickynav and stickyside*/
-  left: 10px;
-  width: 200px;;
-  background-color: #C8E897;
-  /*box-shadow:0 2px 5px 0 rgba(0,0,0,0.2),0 4px 10px 0 rgba(0,0,0,0.19);*/
-  /*opacity: .95;*/
-}
-
 .actualContent {
-  /*margin-top: 80px;*/
+  margin-top: 80px;
 }
 
 .actualContent p {
@@ -206,7 +135,6 @@ nav ul li ul li a:hover {
   text-align: justify;
   font-size: 20px;
   line-height: 30px;
-
 }
 
 body {
@@ -219,67 +147,38 @@ body {
   box-shadow:0 4px 10px 0 rgba(0,0,0,0.2),0 4px 20px 0 rgba(0,0,0,0.19)
 }
 
-/*h1 {
-  font-family: 'Amatic SC', cursive;
-  text-transform: uppercase;
-  font-size: 100px;
-}*/
-
 h1, h5{
 font-family: 'Lekton', sans-serif;
 color: grey;
 text-align: center;
 }
 
-h2 {
-  font-family: 'Montserrat', sans-serif;
-}
-
-h3 {
-  font-family: 'Montserrat', sans-serif;
-}
-
-.sec2 h1 {
-  color: white;
-  background-color: #9DE8D2;
-  padding: 10px 10px;
-  border-radius: 20px;
-  width: 300px;
+.formatCloset{
+  /*margin-left: auto;
+  margin-right: auto;*/
+  width: 5em;
   text-align: center;
-  width: 700px;
-  margin: 0px 100px 100px 100px
 }
 
-.footerProperties {
-  background-color: #ADFFB6;
-  text-align: center;
-  padding: 10px 0px;
-  margin-bottom: 20px;
-}
-
-.shadow{
-  box-shadow:0 4px 10px 0 rgba(0,0,0,0.2),0 4px 20px 0 rgba(0,0,0,0.19)
-}
-
-/*.formatCloset{
-  margin-left: auto;
-   margin-right: auto;
-   width: 5em;
-}
+/*
 html,body {
 	margin: 0;
 	padding: 0;
 }
+
 .slider {
 	width: 100%;
   heigh: 100%;
   margin-top: 100px;
 }
+
+
 .slider-wrapper {
 	width: 100%;
 	height: 400px;
 	position: relative;
 }
+
 .slide {
 	float: left;
 	position: absolute;
@@ -288,41 +187,20 @@ html,body {
 	opacity: 0;
 	transition: opacity 3s linear;
 }
+
 .slider-wrapper > .slide:first-child {
 	opacity: 1;
 }
+
 .canvas{
   float:left;
 }*/
 
-section.sec1 {
-  width: 100%;
-  height: 100vh;
-  background-image: url('images/minimalist-closet2.jpg');
-  background-size:cover;
-  background-position:center;
-  border-radius: 0px;
-}
-
-section.sec2 {
-  width: 900px;
-  height: 50vh;
-  background-image: url('images/thrift-flips-101.jpg');
-  background-size:cover;
-  background-position:center;
-  border-radius: 0px;
-}
-
-#border {
-    border: 2px solid black;
-    padding: 10px;
-    height: 100px;
-    width: 100px;
-    border-top-left-radius: 25px;
-    border-top-right-radius: 25px;
-    border-bottom-right-radius: 25px;
-    border-bottom-left-radius: 25px;
-    text-align: center;
+.footerProperties {
+  background-color: #ADFFB6;
+  text-align: center;
+  padding: 10px 0px;
+  margin-bottom: 20px;
 }
 
 @media screen and (min-width: 736px) /*desktop version*/
@@ -333,11 +211,8 @@ section.sec2 {
     grid-template-areas:
     ". toplogo toplogo toplogo toplogo ."
     "navbar navbar navbar navbar navbar navbar"
-    ". content content content content ."
+    ". myCloset myCloset myCloset myCloset ."
     ". footer footer footer footer .";
       grid-gap: 10px;
   }
-}
-
-
 }

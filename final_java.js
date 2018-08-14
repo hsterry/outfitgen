@@ -17,9 +17,6 @@ jQuery(document).ready(function() {
   });
 });
 
-
-
-
 jQuery(document).ready(function() {
 
   /*var sideOffset = jQuery(".sidebarProperties").offset().top;*/

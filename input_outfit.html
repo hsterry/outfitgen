@@ -20,38 +20,83 @@
 </nav>
 
 <head>
-<title> My Closet </title>
-  <!--Info about the page -->
+  <title> My Closet </title>
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+  <link href="https://fonts.googleapis.com/css?family=Montserrat" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css?family=Lekton" rel="stylesheet">
+  <link rel="stylesheet"; href="input_outfit_format.css">
+  <script src="final_java.js"></script>
+  <script src="cordova.js"></script>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
 </head>
+
 <body>
-<h1> My Closet </h1>
-<!--uploadimage-->
+  <div class="grid">
+    <div class="toplogo">
+      <center><img src="images/Style Up.jpg" width="150"></center>
+    </div>
+    <div class="navbar">
+      <div class="navOpacity"> <nav>
+        <div class="logo"><img src="images/Style Up Cropped Transparent.png" height="40px"></div>
+        <ul>
+          <li><a href="final.html">Home</a>
+            <ul>
+              <!--<li><a href="#">First</a></li>
+              <li><a href="#">Second</a></li>
+              <li><a href="#">Third</a></li>
+              <li><a href="#">Fourth</a></li>-->
+            </ul></li>
+          <li><a href="#">Generator</a>
+            <ul>
+              <!--<li><a href="#">First</a></li>
+              <li><a href="#">Second</a></li>
+              <li><a href="#">Third</a></li>
+              <li><a href="#">Fourth</a></li>-->
+            </ul></li>
+            <li><a href="#">Thrift</a>
+              <ul>
+                <li><a href="thrift_flips_html.html">Thrift Flips</a></li>
+                <!--<li><a href="#">Second</a></li>
+                <li><a href="#">Third</a></li>
+                <li><a href="#">Fourth</a></li>-->
+              </ul></li>
+          <li><a href="input_outfit.html">My Closet</a>
+            <ul>
+              <!--<li><a href="#">First</a></li>
+              <li><a href="#">Second</a></li>
+              <li><a href="#">Third</a></li>
+              <li><a href="#">Fourth</a></li>-->
+            </ul></li>
+          <li><a href="#">Inspiration</a>
+            <ul>
+              <!--<li><a href="#">First</a></li>
+              <li><a href="#">Second</a></li>
+              <li><a href="#">Third</a></li>
+              <li><a href="#">Fourth</a></li>-->
+            </ul></li>
+          <li><a href="log_in.html">Log In</a><li>
+        </ul>
+      </nav> </div>
+    </div>
 
-<div class="formatCloset">
-  <input id="uploadImage" type="file" name="photo"/>
-
-
-  <h5>Preview</h5>
-  <a href="#" id="imageData" type="text" target="_blank">
-    <img id="preview" style="width:200px; height: 200px;" />
-  </a>
-</div>
-
-
-
-
-<br />
-<canvas id="canvas" width="200" height="200" style="border:1px solid #ccc"></canvas>
-<canvas id="canvas" width="200" height="200" style="border:1px solid #ccc"></canvas>
-<canvas id="canvas" width="200" height="200" style="border:1px solid #ccc"></canvas>
-<script src ="cordova.js"></script>
-
-
-
-<html>
-<head>
-<script type="file/javscript">
-var list;
-</script>
+    <div class="myCloset">
+      <!--uploadimage-->
+      <div class="formatCloset">
+      <h1> My Closet </h1>
+        <input id="uploadImage" type="file" name="photo"></input>
+        <h5>Preview</h5>
+        <a href="#" id="imageData" type="text" target="_blank">
+          <img id="preview" style="width:200px; height: 200px;" />
+        </a>
+        <canvas id="canvas" width="200" height="200" style="border:1px solid #ccc"></canvas>
+      </div>
+    </div>
+    <div class="footer">
+      <div class="footerProperties">
+        Footer
+      </div>
+    </div>
 
 </body>
+
+</html>
