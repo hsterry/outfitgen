@@ -9,20 +9,19 @@
   grid-template-areas:
   "toplogo toplogo"
   "navbar navbar"
-  "content content"
+  "myCloset myCloset"
   "footer footer";
   grid-gap: 10px;
 }
 .toplogo {
   grid-area: toplogo;
 }
-
 .navbar {
   grid-area: navbar;
 }
-
-.content {
-  grid-area: content;
+.myCloset {
+  grid-area: myCloset;
+  display: grid;
 }
 .footer {
   grid-area: footer;
@@ -167,25 +166,30 @@ color: grey;
 text-align: center;
 }
 
-/*.formatCloset{
-  margin-left: auto;
-   margin-right: auto;
-   width: 5em;
+.formatCloset{
+  /*margin-left: auto;
+  margin-right: auto;*/
+  width: 5em;
 }
+
 html,body {
 	margin: 0;
 	padding: 0;
 }
+
 .slider {
 	width: 100%;
   heigh: 100%;
   margin-top: 100px;
 }
+
+
 .slider-wrapper {
 	width: 100%;
 	height: 400px;
 	position: relative;
 }
+
 .slide {
 	float: left;
 	position: absolute;
@@ -194,12 +198,23 @@ html,body {
 	opacity: 0;
 	transition: opacity 3s linear;
 }
+
 .slider-wrapper > .slide:first-child {
 	opacity: 1;
 }
+
 .canvas{
   float:left;
-}*/
+}
+
+section.blueColor {
+  width: 100%;
+  height: 63px;
+  background-color: #FFF69E;
+  background-size:cover;
+  background-position:center;
+  box-shadow:0 2px 2px 0 rgba(0,0,0,0.2),0 2px 5px 0 rgba(0,0,0,0.19);
+}
 
 section.sec1 {
   width: 100%;
@@ -210,6 +225,13 @@ section.sec1 {
   border-radius: 0px;
 }
 
+.footerProperties {
+  background-color: #ADFFB6;
+  text-align: center;
+  padding: 10px 0px;
+  margin-bottom: 20px;
+}
+
 @media screen and (min-width: 736px) /*desktop version*/
 {
   .grid {
@@ -218,11 +240,8 @@ section.sec1 {
     grid-template-areas:
     ". toplogo toplogo toplogo toplogo ."
     "navbar navbar navbar navbar navbar navbar"
-    ". content content content content ."
+    ". myCloset myCloset myCloset myCloset ."
     ". footer footer footer footer .";
       grid-gap: 10px;
   }
-}
-
-
 }
