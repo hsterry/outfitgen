@@ -111,28 +111,3 @@ nav ul li ul li a:hover {
   font-size: 15px;
   line-height: 30px;
 }
-
-
-
-
-
-
-
-
-
-
-
-
-@media screen and (min-width: 736px) /*desktop version*/
-{
-  .grid {
-    display: grid;
-    grid-template-columns: 1fr 300px 300px 300px 300px 1fr;
-    grid-template-areas:
-    ". toplogo toplogo toplogo toplogo ."
-    "navbar navbar navbar navbar navbar navbar"
-    ". sidebar content content content ."
-    ". footer footer footer footer .";
-      grid-gap: 10px;
-  }
-}
