@@ -13,6 +13,7 @@
   "footer footer";
   grid-gap: 10px;
 }
+
 .toplogo {
   grid-area: toplogo;
 }
