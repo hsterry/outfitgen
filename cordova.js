@@ -25,7 +25,6 @@ if (lastImgData) {
 for(i=0; i < array.length; i++){
     img.src = array[i];
   }
-
 }
 
 fileReader.onload = function (e) {
