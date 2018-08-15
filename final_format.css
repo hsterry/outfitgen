@@ -216,6 +216,19 @@ nav ul li ul li a:hover {
 
 }
 
+.thriftflipsinfo {
+  margin-top: 80px;
+}
+
+.thriftflipsinfo p {
+  width: 800px;
+  margin: 30px auto 30px 0px;
+  text-align: justify;
+  font-size: 20px;
+  line-height: 30px;
+
+}
+
 body {
   margin: 0;
   padding:0;
@@ -242,6 +255,14 @@ h4 { /* for blue and white title*/
   font-size: 60px;
   margin: 0 0 20px 0;
 }
+
+.thriftflipsinfo h2 {
+  font-family: 'Sawarabi Mincho', sans-serif;
+  text-align: left;
+  font-size: 60px;
+  margin: 0 0 20px 0;
+}
+
 
 
 .amber h2 {
@@ -365,7 +386,15 @@ section.sec3 { /*image header for about us page */
 }
 
 .videowrapper {
-  display: block;
+  display:block;
+  /*padding-bottom: 56.25%;
+  padding-top: 25px;*/
+  padding-bottom: 200px;
+  padding-top: 50px;
+  height: 0px;
+}
+
+.videowrapper iframe {
 
 }
 
