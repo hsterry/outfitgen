@@ -4,7 +4,7 @@ var tops = ['pink top', 'black jeans', 'white tank top', 'black tank top', 'whit
 'red ruffle blouse', 'white button down', 'navy blue cut out sweater' ];
 
 var bottoms = [ 'camo pants', 'black slacks', 'tan pants', 'light wash jeans', 'dark wash jeans', 'dark wash ripped jeans',
-'light wash reipped jeans', 'black ripped jeans', 'black shorts', 'black jeans', 'navy pencil skirt',
+'light wash ripped jeans', 'black ripped jeans', 'black shorts', 'black jeans', 'navy pencil skirt',
 'leather leggings', 'grey tweed zip back skirt', 'black and white jumpsuit'];
 
 var shoes = ['gold strappy sandals', 'timberlands', 'black combat boots', 'red flats', 'tan sandals', 'black flats',
