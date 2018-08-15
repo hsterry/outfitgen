@@ -49,7 +49,7 @@ body {
 }
 
 .navOpacity {
-    opacity: .6;
+    /*opacity: .8;*/
 }
 
 nav {
@@ -65,7 +65,7 @@ nav {
   text-decoration:none;
   font-family: 'Montserrat', sans-serif;
   font-size: 17px;
-  background-color: white;
+  background-color: #9DE8D2;
 }
 
 .nav-placeholder {
@@ -112,17 +112,18 @@ nav ul li a {
 
 nav ul li ul {
   display: block;
-  min-width:200px;
+  min-width:140px;
   position: absolute;
+
   /*box-shadow: 0 2px 5px rgba(0,0,0,.5);*/
   transition: .3s;
   background-color: white;
-  opacity: inherit;
+  /*opacity: inherit;*/
   /*margin-top: 10.3px;*/
 }
 
 nav ul li a:hover {
-  background-color: #9DE8D2;
+  background-color: #4DCCFF;
   border-radius: 1px; /*making larger will round edges*/
   /*opacity: inherit;*/
 }
@@ -134,11 +135,12 @@ nav ul li ul li {
 nav ul li ul li a {
   padding: 5px;
   line-height: 30px;
+  text-align: left;
 }
 
 nav ul li:hover ul li {
   display:block;
-  opacity: inherit;
+  /*opacity: inherit;*/
 }
 
 nav ul li ul li a:hover {
@@ -150,10 +152,12 @@ nav ul li ul li a:hover {
   width: 200px;
   height: 300px;
   left: 10px;
-  padding: 10px 10px;
+  padding: 10px 0 0 0px;
+  margin-left: 20px;
+  margin-top: 80px;
   box-sizing: border-box;
-  transition: .3s;
-  white-space: nowrap;
+  /*transition: .3s;*/
+  /*white-space: nowrap;*/
   /*overflow:hidden;*/
   text-align: left;
   font-family: 'Montserrat', sans-serif;
@@ -187,15 +191,20 @@ nav ul li ul li a:hover {
   /*overflow: visible;*/
   position: fixed;
   top: 100px; /*distance between stickynav and stickyside*/
-  left: 10px;
+  /*left: 10px;*/
   width: 200px;;
   background-color: #C8E897;
   /*box-shadow:0 2px 5px 0 rgba(0,0,0,0.2),0 4px 10px 0 rgba(0,0,0,0.19);*/
   /*opacity: .95;*/
+  box-sizing: border-box;
+  text-align: left;
+  left: 10px;
+  padding: 10px 0 0 0px;
+  margin-left: 10px;
 }
 
 .actualContent {
-  /*margin-top: 80px;*/
+  margin-top: 80px;
 }
 
 .actualContent p {
@@ -210,49 +219,71 @@ nav ul li ul li a:hover {
 body {
   margin: 0;
   padding:0;
-  font-family: Kanit;
+  /*font-family: Kanit;*/
 }
 
 .shadow{
   box-shadow:0 4px 10px 0 rgba(0,0,0,0.2),0 4px 20px 0 rgba(0,0,0,0.19)
 }
 
-/*h1 {
+h4 { /* for blue and white title*/
   font-family: 'Amatic SC', cursive;
   text-transform: uppercase;
   font-size: 100px;
-}*/
-
-h1, h5{
-font-family: 'Lekton', sans-serif;
-color: grey;
-text-align: center;
+  text-align: center;
+  background-color: #9DE8D2;
+  border-radius: 20px; /*making larger will round edges*/
+  width: 600px;
 }
 
-h2 {
-  font-family: 'Montserrat', sans-serif;
+.actualContent h2 {
+  font-family: 'Sawarabi Mincho', sans-serif;
+  text-align: left;
+  font-size: 60px;
+  margin: 0 0 20px 0;
+}
+
+
+.amber h2 {
+  font-family: 'Sawarabi Mincho', sans-serif;
+  text-align: center;
+  font-size: 100px;
+  margin: 0 0 20px 0;
+}
+
+.amber p {
+  width: 900px;
+  margin: 30px auto;
+  text-align: justify;
+  font-size: 20px;
+  line-height: 30px;
+
 }
 
 h3 {
   font-family: 'Montserrat', sans-serif;
 }
 
-.sec2 h1 {
-  color: white;
-  background-color: #9DE8D2;
-  padding: 10px 10px;
-  border-radius: 20px;
-  width: 300px;
+h1 {
+  font-family: 'Montserrat', sans-serif;
+  color: black;
+  padding: 10px 10px 10px 10px;
   text-align: center;
-  width: 700px;
-  margin: 0px 100px 100px 100px
+}
+
+h2 {
+  font-family: 'Montserrat', sans-serif;
+  color: black;
+  padding: 10px 10px 10px 10px;
+  text-align: center;
 }
 
 .footerProperties {
+  font-family: 'Open Sans Condensed', sans-serif;
   background-color: #ADFFB6;
-  text-align: center;
-  padding: 10px 0px;
-  margin-bottom: 20px;
+  text-align: right;
+  padding: 10px 100px;
+  margin: 100px 0 20px 0;
 }
 
 .shadow{
@@ -295,21 +326,31 @@ html,body {
 
 section.sec1 {
   width: 100%;
-  height: 100vh;
+  height: 70vh;
   background-image: url('images/minimalist-closet2.jpg');
   background-size:cover;
   background-position:center;
   border-radius: 0px;
 }
 
-section.sec2 {
+section.sec2 { /*image header for thrift flips page */
   width: 900px;
-  height: 50vh;
+  height: 60vh;
   background-image: url('images/thrift-flips-101.jpg');
   background-size:cover;
   background-position:center;
   border-radius: 0px;
 }
+
+section.sec3 { /*image header for about us page */
+  width: 900px;
+  height: 60vh;
+  background-image: url('images/about_us.jpg');
+  background-size:cover;
+  background-position:center;
+  border-radius: 0px;
+}
+
 
 #border {
     border: 2px solid black;
@@ -332,7 +373,7 @@ section.sec2 {
     ". toplogo toplogo toplogo toplogo ."
     "navbar navbar navbar navbar navbar navbar"
     ". content content content content ."
-    ". footer footer footer footer .";
+    "footer footer footer footer footer footer";
       grid-gap: 10px;
   }
 }
@@ -346,8 +387,8 @@ section.sec2 {
     grid-template-areas:
     ". toplogo toplogo toplogo toplogo ."
     "navbar navbar navbar navbar navbar navbar"
-    ". sidebar content content content ."
-    ". footer footer footer footer .";
-      grid-gap: 10px;
+    "sidebar sidebar content content content ."
+    "footer footer footer footer footer footer";
+    grid-gap: 10px;
   }
 }
