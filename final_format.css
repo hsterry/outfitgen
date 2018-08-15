@@ -112,7 +112,7 @@ nav ul li a {
 
 nav ul li ul {
   display: block;
-  min-width:140px;
+  min-width:150px;
   position: absolute;
 
   /*box-shadow: 0 2px 5px rgba(0,0,0,.5);*/
@@ -262,10 +262,15 @@ h4 { /* for blue and white title*/
   margin: 0 0 20px 0;
 }
 
-
+.amber h1 {
+  font-family: 'Montserrat', sans-serif;
+  color: black;
+  padding: 50px 10px 0px 10px;
+  text-align: center;
+}
 
 .amber h2 {
-  font-family: 'Sawarabi Mincho', sans-serif;
+  font-family: 'Shadows Into Light', cursive;
   text-align: center;
   font-size: 100px;
   margin: 0 0 20px 0;
@@ -394,7 +399,15 @@ section.sec3 { /*image header for about us page */
 }
 
 .videowrapper iframe {
+}
 
+.image_grid {
+  margin: 10px 10px 10px 10px;
+}
+.image_grid img {
+  height: 400px;
+  width: 270px;
+  padding: 10px 10px 10px 10px;
 }
 
 @media screen and (min-width: 736px) /*desktop version*/
