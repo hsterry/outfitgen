@@ -208,7 +208,7 @@ nav ul li ul li a:hover {
 }
 
 .actualContent p {
-  width: 900px;
+  width: 800px;
   margin: 30px auto;
   text-align: justify;
   font-size: 20px;
@@ -362,6 +362,11 @@ section.sec3 { /*image header for about us page */
     border-bottom-right-radius: 25px;
     border-bottom-left-radius: 25px;
     text-align: center;
+}
+
+.videowrapper {
+  display: block;
+
 }
 
 @media screen and (min-width: 736px) /*desktop version*/
