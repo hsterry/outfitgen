@@ -78,12 +78,28 @@
       <!--uploadimage-->
       <div class="formatCloset">
       <h1> My Closet </h1>
-        <input id="uploadImage" type="file" name="photo"></input>
-        <h5>Preview</h5>
-        <a href="#" id="imageData" type="text" target="_blank">
-          <img id="preview" style="width:200px; height: 200px;" />
-        </a>
-        <canvas id="canvas" width="200" height="200" style="border:1px solid #ccc"></canvas>
+      <!DOCTYPE html>
+      <html>
+
+      	<head>
+      	</head>
+
+      	<body>
+
+      		<input id="uploadImage" type="file" name="photo" />
+
+      		<canvas id="canvas" width="640" height="480" style="border:1px solid #ccc"></canvas>
+
+      		<br />
+
+      		<h5>Preview</h5>
+      		<a href="#" id="imageData" type="text" target="_blank">
+      		    <img id="preview" style="width:200px; height: 200px;" />
+      		</a>
+
+      		<script src ="cordova.js"></script>
+      	</body>
+      </html>
       </div>
     </div>
     <div class="footer">
